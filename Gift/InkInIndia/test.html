@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Gift Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .luxury-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .luxury-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(245, 158, 11, 0.15);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(90deg, #D4AF37 0%, #F5D073 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .elegant-border {
+            position: relative;
+        }
+        .elegant-border::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #D4AF37, #F5D073, #D4AF37);
+            border-radius: 3px;
+        }
+        .ceo-image-frame {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+        }
+        .ceo-image-frame::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            background: linear-gradient(45deg, #F5D073, #D4AF37, #F5D073);
+            z-index: -1;
+            border-radius: 20px;
+            animation: rotate 6s linear infinite;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .ceo-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,249,250,0.9) 100%);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+        .ceo-card:hover {
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.15);
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Header and other sections remain unchanged -->
+
+    <main class="pt-[80px] pb-20">
+        <!-- About Our Gift Store Section -->
+        <section class="py-24 bg-gradient-to-br from-amber-50 to-amber-100 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');"></div>
+            
+            <div class="max-w-6xl mx-auto px-4 relative z-10">
+                <div class="text-center mb-16">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 gold-gradient-text elegant-border">
+                        About Our Gift Store
+                    </h1>
+                    <p class="text-lg text-amber-900/80 max-w-3xl mx-auto">
+                        Crafting unforgettable moments through thoughtful gifts
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="luxury-card p-8 rounded-2xl">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-gem text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center text-gray-800 mb-4">Premium Quality</h3>
+                        <p class="text-gray-600 text-center">
+                            Each gift is hand-selected for exceptional craftsmanship and materials that stand the test of time.
+                        </p>
+                        <div class="mt-6 flex justify-center">
+                            <div class="w-12 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="luxury-card p-8 rounded-2xl">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-heart text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center text-gray-800 mb-4">Thoughtful Curation</h3>
+                        <p class="text-gray-600 text-center">
+                            Our collections are carefully curated to help you find the perfect expression of your feelings.
+                        </p>
+                        <div class="mt-6 flex justify-center">
+                            <div class="w-12 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="luxury-card p-8 rounded-2xl">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-star text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center text-gray-800 mb-4">Exceptional Service</h3>
+                        <p class="text-gray-600 text-center">
+                            Our team provides personalized assistance to make your gifting experience seamless and joyful.
+                        </p>
+                        <div class="mt-6 flex justify-center">
+                            <div class="w-12 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Our Visionary CEO Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center">
+                    <div class="ceo-image-frame floating w-80 h-80">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="CEO" class="w-full h-full object-cover rounded-[14px]">
+                    </div>
+                </div>
+                
+                <div class="ceo-card p-10 rounded-2xl relative">
+                    <div class="absolute -top-5 -right-5 bg-amber-500 text-white p-3 rounded-full shadow-lg">
+                        <i class="fas fa-quote-right text-xl"></i>
+                    </div>
+                    
+                    <h2 class="text-4xl font-bold mb-6 gold-gradient-text">
+                        Meet Our Visionary CEO
+                    </h2>
+                    
+                    <blockquote class="text-lg leading-relaxed text-gray-700 mb-8 italic relative pl-6">
+                        <div class="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-amber-400 to-amber-600 rounded-full"></div>
+                        "At Gift Store, we believe in the power of giving. My vision is to transform every gift into a memory that lasts forever. With passion and dedication, we're here to make your celebrations extraordinary."
+                    </blockquote>
+                    
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-signature text-amber-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">John Doe</p>
+                            <p class="text-sm text-amber-600">Founder & CEO</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-amber-100 flex space-x-4">
+                        <div class="w-8 h-1 bg-amber-400 rounded-full"></div>
+                        <div class="w-4 h-1 bg-amber-400 rounded-full"></div>
+                        <div class="w-2 h-1 bg-amber-400 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other sections remain unchanged -->
+    </main>
+
+    <!-- Footer remains unchanged -->
+
+    <script>
+        // Simple animation to add some life to the elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.luxury-card, .ceo-card');
+            
+            cards.forEach((card, index) => {
+                // Add staggered animation
+                card.style.transitionDelay = `${index * 100}ms`;
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 500 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>
